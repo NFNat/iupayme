@@ -1,0 +1,177 @@
+.nav__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.nav__titulo__logo{
+  width: 2rem;
+}
+
+.nav__titulo {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+  font-style: italic;
+}
+
+.nav__cuerpo {
+  height: 100%;
+  margin-top: 0px;
+  margin-left: 0.7rem;
+}
+
+.nav__cuerpo ul {
+  margin-top: 1rem;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  list-style-type: none;
+  list-style-image: none;
+  list-style-position: outside;
+}
+
+.nav__cuerpo li {
+  font-size: 0.7rem;
+}
+
+.nav__cuerpo a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #000000;
+  font-weight: bold;
+}
+
+.nav__item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: 0.6s;
+}
+
+.nav__item__a {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.fa-angle-right {
+  color: #E6EEFB;
+}
+
+.nav__item:hover {
+  background-color: #000000;
+  border-radius: 1rem;
+  transform: scale(1.05);
+
+  a {
+    color: #ffffff;
+  }
+
+  .fa-greater-than {
+    color: #ffffff;
+  }
+
+}
+
+.div__switch{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  div{
+    font-size: 0.7rem;
+    color: #000000;
+    font-weight: bold;
+  }
+}
+
+
+
+
+.switch {
+  font-size: 1rem;
+  position: relative;
+  display: inline-block;
+  width: 2.1rem;
+  height: 1.1rem;
+ }
+
+
+ .switch input {
+  opacity: 1;
+  width: 0;
+  height: 0;
+ }
+
+
+ .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  background: #fff;
+  transition: .4s;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+ }
+
+ .slider:before {
+  position: absolute;
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  border-radius: 16px;
+  left: 1.2px;
+  top: 0;
+  bottom: 0;
+  background-color: white;
+  box-shadow: 0 2px 5px #999999;
+  transition: .4s;
+ }
+
+ input:checked + .slider {
+  background-color: #bd1289;
+  border: 1px solid transparent;
+ }
+
+ input:checked + .slider:before {
+  transform: translateX(1rem);
+ }
+
+
+ .mobile-nav {
+  display: none;
+ }
+
+@media screen and (max-width: 40em) {
+.nav__container{
+  display: none;
+}
+ .mobile-nav {
+  display: block;
+  background: #ff3232;
+  color: #ffffff;
+  position: fixed;
+  bottom: 1rem;
+  height: 6rem;
+  width: 100%;
+  margin-left: -1.5rem;
+  display: flex;
+  justify-content: space-around;
+}
+.bloc-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 2rem;
+}
+.bloc-icon img {
+  width: 30px;
+}
+}

@@ -1,0 +1,36 @@
+.comparative__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+.comparative__sup{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top:1rem ;
+}
+.comparative__sup__set{
+  display: flex;
+  justify-content: space-evenly;
+  width: 40%;
+
+}
+
+.comparative__sup__type{
+ display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.comparative_graph{
+  width: 100%;
+  height: 100%;
+}
+.blue{
+  color: blue;
+}
+.yellow{
+  color: yellowgreen
+}
+
+

@@ -1,0 +1,89 @@
+
+.container {
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  height: 95%;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: 0.7fr 1.1fr 1.2fr 1fr;
+  grid-template-rows: 0.4fr 1.5fr 1.7fr 0.4fr;
+  gap: 1em 1em;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "app__menu app__header app__header app__header"
+    "app__menu app__tarjetas app__balance app__comparative"
+    "app__menu app__tarjetas app__resume app__resume"
+    "app__menu app_footer app_footer app_footer";
+}
+.app__header {
+  grid-area: app__header;
+}
+
+.app__menu {
+  grid-area: app__menu;
+}
+
+.app__tarjetas {
+  grid-area: app__tarjetas;
+}
+
+.app__balance {
+  grid-area: app__balance;
+}
+
+.app__comparative {
+  grid-area: app__comparative;
+}
+
+.app__resume {
+  grid-area: app__resume;
+}
+.app_footer {
+  grid-area: app_footer;
+}
+
+.app__menu,
+.app__tarjetas,
+.app__balance,
+.app__comparative,
+.app__resume {
+  background-color: #E6EEFB;
+  border-radius: 1rem;
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9em) {
+.container{
+  margin: 0;
+  grid-template-columns: 0.9fr 1.2fr 0.8fr 0.8fr;
+
+  grid-template-areas:
+    "app__menu app__header app__header app__header"
+    "app__menu app__tarjetas app__balance app__balance"
+    "app__menu app__tarjetas app__resume app__resume"
+    "app__menu app_footer app_footer app_footer";
+
+
+}
+.app__comparative{
+  display: none;
+}
+}
+
+
+
+@media screen and (max-width: 40em) {
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .app__comparative,
+  .app_footer   {
+    display: none;
+  }
+
+
+
+}
+
+

@@ -1,0 +1,34 @@
+<div class="resume__container">
+  <div class="resume__sup">
+    <div class="resum__sup__title"> Transaction History</div>
+    <div class="resum__sup__search mobile__hide"><input class="search" type="search" name="Search " placeholder="Search"id="">  </div>
+  </div>
+
+<div class="resume__table">
+  <table >
+    <tr>
+    <th>Nº</th>
+    <th class="mobile__hide">🠕 🠗</th>
+    <th class="tablet__hide" >ID</th>
+    <th class="tablet__hide">Trasnfer Type</th>
+    <th>User</th>
+    <th>Amount</th>
+    <th class="tablet__hide">Date</th>
+
+    </tr>
+    <tr *ngFor="let transaction of transactions">
+    <td>{{transaction.number}}</td>
+    <td class="mobile__hide" [ngClass]="{'red__arrow':transaction.arrow==='🠕','green__arrow':transaction.arrow==='🠗'}">{{transaction.arrow}}</td>
+    <td class="tablet__hide">{{transaction.id}}</td>
+    <td class="tablet__hide">{{transaction.type}}</td>
+    <td>{{transaction.user}}</td>
+    <td>{{transaction.amount | currency}}</td>
+    <td class="tablet__hide">{{transaction.date | date: 'YYYY/MM/dd'}}  </td>
+    </tr>
+
+    </table>
+
+
+</div>
+
+</div>

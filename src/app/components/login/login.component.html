@@ -1,0 +1,45 @@
+
+<div class="container__login">
+
+  <div class="welcome__login">
+    <img class="welcome__login_img" src="../../../assets/loginImage.jpg" alt="">
+  </div>
+
+  <div class="form__login">
+    <div class="nav__titulo">
+      <img class="nav__titulo__logo" src="../../../assets/iulogobgt.png" alt=""> iuPayme
+      </div>
+    <h1>¡Hola! Te damos la bienvenida </h1>
+
+    <form [formGroup]="logForm" (ngSubmit)="saveData()" >
+      <div class="input-group">
+        <label for="dni"> DNI </label>
+        <input type="number" name="dni" required id="dni" >
+        <p *ngIf="logForm.get('dni')">Debe ingresar un dni</p>
+      </div>
+
+
+      <div class="input-group">
+        <label for="password"> Password </label>
+        <input type="password" name="password" required id="password" >
+        <p *ngIf="logForm.get('password')"> Campo incorrecto</p>
+      </div>
+
+      <div class="input-group">
+        <label for="user">User </label>
+        <input type="email" name="user" required id="user" >
+        <p *ngIf="logForm.get('user')" >debe ingresar un email</p>
+      </div>
+      <button class="button__login" [disabled]="logForm.invalid" type="submit">Ingresar</button>
+    </form>
+
+
+    <nav class="mobile-nav">
+      <a href="#" class="bloc-icon"><i class="fa-solid fa-circle-info"></i></a>
+      <a href="#" class="bloc-icon"><i class="fa-solid fa-unlock-keyhole"></i>
+      </a>
+
+
+  </nav>
+
+</div>

@@ -1,0 +1,49 @@
+
+
+<div class="container__card card__desktop">
+
+    <div *ngFor="let card of cards" class="card ">
+      <div class="card-name"> IuPayme </div>
+      <div class="card-number">
+        <p> {{ card.number1 }} {{ card.number2 }} {{ card.number3 }} {{ card.number4 }}</p>
+      </div>
+      <div class="card-balance"> {{card.balance | currency }}</div>
+    </div>
+
+  </div>
+
+<div class=" container__card card__mobile">
+
+
+        <div  class="card">
+          <div class="card-name"> IuPayme </div>
+          <div class="card-number">
+            <p> {{ cardChosen.number1 }} {{ cardChosen.number2 }} {{ cardChosen.number3 }} {{ cardChosen.number4 }}</p>
+          </div>
+          <div class="card-balance"> {{cardChosen.balance | currency }}</div>
+
+      </div>
+
+
+      <div class="pagination">
+        <a class="active" href="#"> 1</a>
+        <a class="next" href="#">2</a>
+        <a class="next" href="#">3</a>
+
+      </div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+

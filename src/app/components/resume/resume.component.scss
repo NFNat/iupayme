@@ -28,8 +28,11 @@
   border-radius: 1rem;
   padding: 0.5rem 1rem;
 }
+.resume__table{
+  display: flex;
+}
 table {
-  width: 90%;
+  width: 100%;
 }
 th{
   font-weight: bold;
@@ -75,14 +78,13 @@ td, th {
 
   }
   @media screen and (max-width: 40em) {
+
     .tablet__hide,
     .mobile__hide{
       display: none;
     }
     td, th {
-
-      height: 2rem;
-
-
+      height: 1rem;
+      padding: 0.3rem;
     }
   }
